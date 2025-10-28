@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset and Variables */
+/* Color Codes provided:
+   Primary color - #05496B (Dark Background)
+   Secondary color - #017BC6 (Hover/Accent Highlight)
+   Accent color - #D9D9D9 (Text/Link Color)
+*/
+
+/* Basic setup and variables for easy use */
+:root {
+    --primary-color: #05496B;
+    --secondary-color: #017BC6;
+    --accent-color: #D9D9D9; 
+}
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif; 
+}
+
+/* 1. Navigation Bar Styling */
+.navbar {
+    background-color: var(--primary-color); /* Dark Blue Background */
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0 50px; 
+    height: 60px; 
+    color: var(--accent-color); /* Text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    position: relative; 
+    z-index: 10; 
+}
+
+/* Logo container styling */
+.logo-container .logo {
+    height: 40px; 
+    /* Filter to make the logo match the accent color if it's not already light */
+    filter: invert(85%) sepia(0%) saturate(100%) hue-rotate(0deg) brightness(100%); 
+    display: block;
+}
+
+/* Container for the middle navigation links */
+.nav-links {
+    display: flex;
+    gap: 30px; 
+}
+
+/* Styling for all anchor tags (links) inside the navigation */
+.nav-links a {
+    color: var(--accent-color); /* Light gray text color */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0; 
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color); /* Bright blue color on hover */
+}
+
+/* Styling for the Login /Signup link on the right */
+.auth-links a {
+    color: var(--accent-color); /* Light gray text color */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: opacity 0.3s;
+}
+
+.auth-links a:hover {
+    color: var(--secondary-color); /* Bright blue color on hover */
+    opacity: 1; 
+}
+:root {
+    --primary-color: #05496B; /* Dark blue background */
+    --accent-color: #D9D9D9; /* Light text color */
+}
+
+/* Ensure the footer spans the full width and has the dark background */
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 60px 20px;
+    width:1600px;
+
+}
+
+/* Main container for the columns */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px; /* Space between columns */
+}
+
+/* Styling for each column */
+.footer-col {
+    /* Base style for all columns to distribute space */
+    flex: 1; 
+    min-width: 180px; /* Minimum width to prevent crushing */
+    padding: 0 10px;
+}
+
+/* Column Headings (Pricing, Legal, Get In Touch) */
+.footer-col h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff; /* Use pure white for headings */
+    margin-bottom: 25px;
+}
+
+/* Links and Paragraphs */
+.footer-col a,
+.footer-col p {
+    display: block; /* Make links and text block-level for vertical stacking */
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+
+.footer-col a:hover {
+    color: var(--secondary-color); /* Use secondary color for hover effect */
+}
+
+/* --- Column 1: Logo/Name --- */
+
+.company-info-col {
+    flex: 1.2; /* Give the first column slightly more space */
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo {
+    height: 40px; 
+    margin-right: 10px;
+    /* The filter makes the icon white, but won't fix a missing image */
+    filter: brightness(0) invert(-1); 
+}
+.footer-logo .company-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    //color: #ffffff;//
+}
+
+
+/* --- Column 4: Contact Details --- */
+
+.contact-col {
+    flex: 1.5; /* Give the contact column more space for the address */
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start; /* Align icon to the top of the text */
+    margin-bottom: 20px;
+}
+
+/* Styling for the icons (requires Font Awesome CSS linked in HTML) */
+.contact-item i {
+    font-size: 1.2em;
+    color: #ffffff;
+    width: 20px; /* Fixed width for icon */
+    margin-right: 15px;
+    margin-top: 2px; /* Slight vertical alignment adjustment */
+}
+
+.contact-item p,
+.contact-item a {
+    display: inline; /* Keep text flowing naturally */
+    line-height: 1.5;
+}
+
+/* Ensure address lines break correctly */
+.contact-item p br {
+    display: block;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .footer-content {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 30px;
+    }
+
+    .footer-col {
+        min-width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    /* Center text inside the columns */
+    .footer-col h4,
+    .footer-col a,
+    .footer-col p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+    }
+    
+    .contact-item i {
+        /* Hide icons on small screens or adjust centering */
+        display: none; 
+    }
+    
+    .contact-item p,
+    .contact-item a {
+        text-align: center;
+        display: inline;
+    }
+}
+</style>
+</head>
+<body>
+    <header class="navbar" style="width:1600px; margin-left: -23px;">
+        <div class="logo-container">
+            <img src="cclogo.png" alt="Magizh Logo" class="logo" style="background-color: white;">
+        </div>
+        <nav class="nav-links">
+            <a href="index.html" style="font-size: larger;">Home</a>
+            <a href="project.html" style="font-size: larger;">Projects</a>
+            <a href="career.html" style="font-size: larger;">Career</a>
+            <a href="about.html" style="font-size: larger;">About us</a>
+           
+          
+        </nav>
+        <nav>
+        <div class="auth-links">
+            <a href="login.html" id="authLink" style="font-size: larger;">Login /Signup</a>
+          
+        </div>
+    </nav>
+    </header>
+    <img src="luxury.png" style="margin-left: -32px;margin-top: 23px;">
+    <img src="image46.png" style="margin-left: 142px;margin-top: 23px;width:1300px;">
+    <br>
+    <img src="image47.png" style="margin-left: 342px;width:700px; height:200px;">
+    <img src="image48.png" style="margin-left: 142px;margin-top: 23px;width:1300px;">
+    <br>
+    <img src="image49.png" style="margin-left: 342px;width:700px; height:200px;">
+    <img src="image50.png" style="margin-left: 142px;margin-top: 23px;width:1300px;">
+    <br>
+    <img src="image51.png" style="margin-left: 342px;width:700px; height:200px;">
+    
+    
+    <footer style="margin-left: -7px;">
+        <div class="footer-content">
+            
+            <div class="footer-col company-info-col">
+                <div class="footer-logo">
+                    <img src="logo-removebg-preview (1).png"  class="logo" style="background-color: #017BC6;"> 
+                    <span class="company-name">Magizh Builders</span>
+                </div>
+            </div>
+    
+            <div class="footer-col links-col">
+                <h4>Pricing</h4>
+                <a href="#">About</a>
+                <a href="#">Add Properties</a>
+            </div>
+    
+            <div class="footer-col legal-col">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Licence aggrement</a>
+                <a href="#">Terms of use</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+    
+            <div class="footer-col contact-col">
+                <h4>Get In Touch</h4>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i> 
+                    <p>39, Kodambakkam Road,<br>Ethiraj Nagar,West mambalam,<br>Chennai- 600033,Tamilnadu,<br>India.</p>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+91123456789">+91 123 456 789</a>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:Info@magizhbuilders.com">Info@magizhbuilders.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
